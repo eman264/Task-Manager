@@ -1,0 +1,22 @@
+<div *ngIf='!taskId'>
+  <p>
+    Can't match any Id
+  </p>
+</div>
+
+<div *ngIf='taskId'>
+  <input  type="text"
+   placeholder="Task Title"
+  [(ngModel)]="task.title">       <br>
+
+  <textarea  placeholder="Task Description"
+  [(ngModel)]="task.description">
+  </textarea>           <br>
+
+  <button (click)='saveTask( )'>Save</button>
+
+  <button (click)='deleteTask()'>Delete</button>
+
+  <a routerLink='/'>Cancel</a>
+
+</div>
